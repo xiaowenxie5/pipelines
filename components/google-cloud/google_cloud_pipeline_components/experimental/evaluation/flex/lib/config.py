@@ -12,8 +12,8 @@ from lib import evaluation_column_specs as ecs
 from lib import tfma_adapter
 from lib import tfma_metrics
 from lib.constants import Metric
-from lib.proto import model_evaluation_pb2
-from lib.proto import configuration_pb2
+from lib import model_evaluation_pb2
+from lib import configuration_pb2
 from google.protobuf import message
 
 ColumnSpec = column_spec.ColumnSpec
@@ -589,15 +589,19 @@ def get_pipeline_options_from_service_config(
       worker_options.max_num_workers = dataflow_beam_spec.max_num_workers
     if dataflow_beam_spec.machine_type:
       worker_options.machine_type = dataflow_beam_spec.machine_type
-    pipeline_options.view_as(
+    print(pipeline_options.view_as(
         pipeline_opts_lib.SetupOptions
-    ).setup_file = dataflow_beam_spec.setup_file or ENV_SETUP_FILE
+    ).setup_file)
+    print(pipeline_options.view_as(
+        pipeline_opts_lib.SetupOptions
+    ).save_main_session) 
     pipeline_options.view_as(pipeline_opts_lib.StandardOptions
                             ).runner = constants.Pipeline.DATAFLOW_RUNNER
   else:
     local_beam_spec = mes_config.execution.local_beam
     pipeline_options.view_as(pipeline_opts_lib.DirectOptions
                             ).direct_num_workers = local_beam_spec.num_workers
+  print(pipeline_options)
   return pipeline_options
 
 

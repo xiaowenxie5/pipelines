@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 
-import "lib/proto/configuration.proto";
+import "lib/configuration.proto";
 
 // A top level message containing all the information necessary for doing an
 // evaluation.

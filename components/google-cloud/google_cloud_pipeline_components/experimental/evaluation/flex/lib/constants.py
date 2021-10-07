@@ -58,7 +58,6 @@ class Metric(object):
   R_SQUARED = 'squared_pearson_correlation'
   WEIGHTED_EXAMPLE_COUNT = 'weighted_example_count'
   QUANTILE_ACCURACY = 'quantile_accuracy'
-  CUSTOM = 'google3.cloud.ai.platform.evaluation.metrics.lib.custom_metrics'
 
 
 class Data(object):

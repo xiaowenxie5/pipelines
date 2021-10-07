@@ -8,8 +8,7 @@ from apache_beam.options import pipeline_options
 from lib import beam as beam_lib
 from lib import config
 from lib import constants
-from lib.proto import model_evaluation_pb2
-from lib.proto import configuration_pb2
+from lib import model_evaluation_pb2, configuration_pb2
 from google.protobuf import json_format
 
 JsonType = Dict[str, Any]

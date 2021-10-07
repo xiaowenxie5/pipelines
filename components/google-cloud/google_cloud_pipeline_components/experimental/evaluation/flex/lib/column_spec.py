@@ -2,7 +2,7 @@
 
 from typing import Any, Dict, List, Text, Union
 
-from lib.proto import configuration_pb2
+from lib import configuration_pb2
 from google.protobuf import json_format
 
 SUBKEY_SEPARATOR = '__'

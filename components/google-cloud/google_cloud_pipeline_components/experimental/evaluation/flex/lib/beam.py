@@ -14,7 +14,7 @@ from lib import constants
 from lib import evaluation_column_specs as ecs
 from lib import io
 from lib import tfma_adapter
-from lib.proto import model_evaluation_pb2 as me_proto
+from lib import model_evaluation_pb2 as me_proto
 
 from google.protobuf import json_format, message
 

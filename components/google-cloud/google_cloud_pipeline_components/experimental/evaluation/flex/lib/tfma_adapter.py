@@ -11,7 +11,7 @@ from tensorflow_model_analysis.proto import config_pb2
 from tensorflow_model_analysis.proto import metrics_for_slice_pb2
 
 from lib import column_spec, constants
-from lib.proto import model_evaluation_pb2 as me_proto
+from lib import model_evaluation_pb2 as me_proto
 
 ColumnSpec = column_spec.ColumnSpec
 
